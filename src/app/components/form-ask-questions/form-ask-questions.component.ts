@@ -10,23 +10,29 @@ export class FormAskQuestionsComponent implements OnInit {
   @Output() dataSend: EventEmitter<FormGroup>;
   formModel: FormGroup;
 
+  maxAmount: any = {
+    maxPPPF: 1500,
+    maxPPE: 8500,
+    maxPPA: 5750
+  }
+
   constructor(){
     this.dataSend = new EventEmitter();
     this.formModel = new FormGroup({
       //Plan de pensiones persona fisica
       PPPF: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^(0|[1-9][0-9]{0,2}|1[0-4][0-9]{2}|1500)$/)
+        Validators.pattern(/^(0|[1-9][0-9]{0,2}|1[0-4][0-9]{2}|${maxAmount.maxPPF})$/)
       ]),
       //Plan de pensiones de empresa
       PPE: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^(0|[1-9][0-9]{0,2}|1[0-4][0-9]{2}|8500)$/)
+        Validators.pattern(/^(0|[1-9][0-9]{0,2}|1[0-4][0-9]{2}|${maxAmount.maxPPE})$/)
       ]),
       //Plan de pensiones de autonomo
       PPA: new FormControl('', [
         Validators.required,
-        Validators.pattern(/^(0|[1-9][0-9]{0,2}|1[0-4][0-9]{2}|5750)$/)
+        Validators.pattern(/^(0|[1-9][0-9]{0,2}|1[0-4][0-9]{2}|${maxAmount.maxPPA})$/)
       ]),
       //Total facturado/Base imponible
       BI: new FormControl('', [

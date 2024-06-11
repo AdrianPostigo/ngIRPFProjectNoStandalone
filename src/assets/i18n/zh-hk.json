@@ -1,0 +1,14 @@
+{
+    "pppf": "个人养老金计划",
+    "ppe": "公司养老金计划",
+    "ppa": "自由职业者养老金计划",
+    "bi": "总发票/应税基数",
+    "mandatoryField": "该字段是必填项",
+    "fieldMsg": "该值不能超过",
+    "fieldInputValueForm": "计算",
+    "coin": "￥",
+    "totalAmount": "养老金计划总存储金额",
+    "irpf": "个人所得税",
+    "amountDerecord": "可扣除金额",
+    "titleSelectLanguage": "选择一个标志更改语言和货币"
+}

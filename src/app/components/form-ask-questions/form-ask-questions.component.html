@@ -1,34 +1,33 @@
 <section class="formQuestions-container">
     <form novalidate  [formGroup]="formModel" (ngSubmit)="getDataForm()" class="displayForm">
         <mat-form-field floatLabel="always">
-            <mat-label class="title">Plan de pensiones persona fisica</mat-label>
+            <mat-label class="title">{{ 'pppf' | translate }}</mat-label>
             <input matInput type="number" class="formQuestions-right-align" id="PPPF" placeholder="0" formControlName="PPPF">
-            <span matTextPrefix>€&nbsp;</span>
-            <p class="error" *ngIf="checkControl('PPPF', 'required')">El campo es obligatorio</p>
-            <p class="error" *ngIf="checkControl('PPPF', 'pattern')">El valor no puede superar 1500</p>
+            <span matTextPrefix>{{ 'coin' | translate }}&nbsp;</span>
+            <p class="error" *ngIf="checkControl('PPPF', 'required')">{{ 'mandatoryField' | translate }}</p>
+            <p class="error" *ngIf="checkControl('PPPF', 'pattern')">{{ 'fieldMsg' | translate }} {{maxAmount.maxPPPF}}</p>
         </mat-form-field>
         <mat-form-field floatLabel="always">
-            <mat-label class="title">Plan de pensiones de empresa</mat-label>
+            <mat-label class="title">{{ 'ppe' | translate }}</mat-label>
             <input matInput type="number" class="formQuestions-right-align" id="PPE" placeholder="0" formControlName="PPE">
-            <span matTextPrefix>€&nbsp;</span>
-            <p class="error" *ngIf="checkControl('PPE', 'required')">El campo es obligatorio</p>
-            <p class="error" *ngIf="checkControl('PPE', 'pattern')">El valor no puede superar 8500</p>
+            <span matTextPrefix>{{ 'coin' | translate }}&nbsp;</span>
+            <p class="error" *ngIf="checkControl('PPE', 'required')">{{ 'mandatoryField' | translate }}</p>
+            <p class="error" *ngIf="checkControl('PPE', 'pattern')">{{ 'fieldMsg' | translate }} {{maxAmount.maxPPE}}</p>
         </mat-form-field>
         <mat-form-field floatLabel="always">
-            <mat-label class="title">Plan de pensiones de autonomo</mat-label>
+            <mat-label class="title">{{ 'ppa' | translate }}</mat-label>
             <input matInput type="number" class="formQuestions-right-align" id="PPA" placeholder="0" formControlName="PPA">
-            <span matTextPrefix>€&nbsp;</span>
-            <p class="error" *ngIf="checkControl('PPA', 'required')">El campo es obligatorio</p>
-            <p class="error" *ngIf="checkControl('PPA', 'pattern')">El valor no puede superar 5750</p>
+            <span matTextPrefix>{{ 'coin' | translate }}&nbsp;</span>
+            <p class="error" *ngIf="checkControl('PPA', 'required')">{{ 'mandatoryField' | translate }}</p>
+            <p class="error" *ngIf="checkControl('PPA', 'pattern')">{{ 'fieldMsg' | translate }} {{maxAmount.maxPPA}}</p>
         </mat-form-field>
         <mat-form-field floatLabel="always">
-            <mat-label class="title">Total facturado/Base imponible</mat-label>
+            <mat-label class="title">{{ 'bi' | translate }}</mat-label>
             <input matInput type="number" class="formQuestions-right-align" id="BI" placeholder="0" formControlName="BI">
-            <span matTextPrefix>€&nbsp;</span>
-            <p class="error" *ngIf="checkControl('BI', 'required')">El campo es obligatorio</p>
-            <p class="error" *ngIf="checkControl('BI', 'pattern')">El valor no puede superar 5750</p>
+            <span matTextPrefix>{{ 'coin' | translate }}&nbsp;</span>
+            <p class="error" *ngIf="checkControl('BI', 'required')">{{ 'mandatoryField' | translate }}</p>
         </mat-form-field>
 
-        <input type="submit" class="inputButton" value="Calcular" [disabled]="!formModel.valid">
+        <input type="submit" class="inputButton" value="{{ 'fieldInputValueForm' | translate }}" [disabled]="!formModel.valid">
     </form>
 </section>

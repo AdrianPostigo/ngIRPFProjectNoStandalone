@@ -1,0 +1,14 @@
+{
+    "pppf": "Plan de pensiones persona fisica",
+    "ppe": "Plan de pensiones de empresa",
+    "ppa": "Plan de pensiones de autonomo",
+    "bi": "Total facturado/Base imponible",
+    "mandatoryField": "El campo es obligatorio",
+    "fieldMsg": "El valor no puede superar",
+    "fieldInputValueForm": "Calcular",
+    "coin": "€",
+    "totalAmount": "Total dinero almacenado en planes de pensiones",
+    "irpf": "IRPF",
+    "amountDerecord": "Cantidad a desgrabar",
+    "titleSelectLanguage": "Selecciona una bandera para cambiar el idioma y la moneda"
+}

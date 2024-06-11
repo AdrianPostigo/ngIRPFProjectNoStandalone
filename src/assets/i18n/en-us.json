@@ -1,0 +1,14 @@
+{
+    "pppf": "Individual Pension Plan",
+    "ppe": "Company Pension Plan",
+    "ppa": "Self-employed Pension Plan",
+    "bi": "Total Invoiced/Taxable Base",
+    "mandatoryField": "The field is mandatory",
+    "fieldMsg": "The value cannot exceed",
+    "fieldInputValueForm": "Calculate",
+    "coin": "$",
+    "totalAmount": "Total money stored in pension plans",
+    "irpf": "Personal Income Tax",
+    "amountDerecord": "Amount to deduct",
+    "titleSelectLanguage": "Select a flag to change the language and currency"
+}

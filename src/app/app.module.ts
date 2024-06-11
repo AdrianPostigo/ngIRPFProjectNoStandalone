@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HttpClientModule } from '@angular/common/http';
 
 //Components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -17,6 +18,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+
+//i18n
+import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslation } from './core/config/i18n/translate-loader.config';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +38,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+
+    TranslateModule,
 
 
     MatGridListModule,
@@ -40,7 +49,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    importProvidersFrom(TranslateModule.forRoot(provideTranslation()))
   ],
   bootstrap: [AppComponent]
 })

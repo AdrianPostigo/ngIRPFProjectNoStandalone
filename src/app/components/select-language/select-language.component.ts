@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-select-language',
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class SelectLanguageComponent {
 
+  constructor(private translateService: TranslateService){}
 
   obtainLanguage(lang: string){
-    console.log("flag",lang)
+    this.translateService.use(lang)
+    // console.log("flag",lang)
   }
 }
