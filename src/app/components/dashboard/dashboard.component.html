@@ -1,0 +1,22 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+        <div class="width">
+            <app-form-ask-questions (dataSend)="saveQuestions($event)"></app-form-ask-questions>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="width">
+            <app-screen-amount-of-money [amountOfMoney]="questions"></app-screen-amount-of-money>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="width">
+            <app-select-language></app-select-language>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="width">
+            <app-screen-irpf-results [amountOfMoney]="questions"></app-screen-irpf-results>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

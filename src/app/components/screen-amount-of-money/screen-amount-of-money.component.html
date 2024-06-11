@@ -1,0 +1,14 @@
+<section *ngIf="amountOfMoney.BI !== 0" class="container">
+    <div>
+        <p>Plan de pensiones persona fisica: {{amountOfMoney?.PPPF}} €</p>
+    </div>
+    <div class="spacing">
+        <p>Plan de pensiones de empresa: {{amountOfMoney?.PPE}} €</p>
+    </div>
+    <div class="spacing">
+        <p>Plan de pensiones de autonomo: {{amountOfMoney?.PPA}} €</p>
+    </div>
+    <div>
+        <p>Total facturado/Base imponible: {{amountOfMoney?.BI}} €</p>
+    </div>
+</section>

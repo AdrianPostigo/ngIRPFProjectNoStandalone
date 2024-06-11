@@ -1,0 +1,34 @@
+<section class="formQuestions-container">
+    <form novalidate  [formGroup]="formModel" (ngSubmit)="getDataForm()" class="displayForm">
+        <mat-form-field floatLabel="always">
+            <mat-label class="title">Plan de pensiones persona fisica</mat-label>
+            <input matInput type="number" class="formQuestions-right-align" id="PPPF" placeholder="0" formControlName="PPPF">
+            <span matTextPrefix>€&nbsp;</span>
+            <p class="error" *ngIf="checkControl('PPPF', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkControl('PPPF', 'pattern')">El valor no puede superar 1500</p>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label class="title">Plan de pensiones de empresa</mat-label>
+            <input matInput type="number" class="formQuestions-right-align" id="PPE" placeholder="0" formControlName="PPE">
+            <span matTextPrefix>€&nbsp;</span>
+            <p class="error" *ngIf="checkControl('PPE', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkControl('PPE', 'pattern')">El valor no puede superar 8500</p>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label class="title">Plan de pensiones de autonomo</mat-label>
+            <input matInput type="number" class="formQuestions-right-align" id="PPA" placeholder="0" formControlName="PPA">
+            <span matTextPrefix>€&nbsp;</span>
+            <p class="error" *ngIf="checkControl('PPA', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkControl('PPA', 'pattern')">El valor no puede superar 5750</p>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label class="title">Total facturado/Base imponible</mat-label>
+            <input matInput type="number" class="formQuestions-right-align" id="BI" placeholder="0" formControlName="BI">
+            <span matTextPrefix>€&nbsp;</span>
+            <p class="error" *ngIf="checkControl('BI', 'required')">El campo es obligatorio</p>
+            <p class="error" *ngIf="checkControl('BI', 'pattern')">El valor no puede superar 5750</p>
+        </mat-form-field>
+
+        <input type="submit" class="inputButton" value="Calcular" [disabled]="!formModel.valid">
+    </form>
+</section>

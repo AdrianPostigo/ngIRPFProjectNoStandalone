@@ -1,0 +1,24 @@
+.title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-top: -10rem;
+    margin-bottom: 10rem;
+}
+
+.rowFlag{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+button{
+    cursor: pointer;
+}
+
+.flagImage{
+    width: 5rem;
+    height: auto;
+}
